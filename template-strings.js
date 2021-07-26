@@ -46,6 +46,7 @@ function exercici_nivell_tres(){
     let matriu = [],
     count = 1
     for(let i=0;i<10;i++) matriu[i]=compte_fins_nou
+    
     matriu.forEach(f=>{
         f()
         console.log(`loop num: ${count} acabat`)
@@ -55,4 +56,4 @@ function exercici_nivell_tres(){
 /* - Exercici 2
 Crear una funció anònima autoinvocable (igualada a una variable) que imprimeixi 
 per pantalla el nom d'usuari rebut com a paràmetre */
-(function(nom){console.log(`${nom}`)})('Alvaro')
+(function(nom){console.log(nom)})('Alvaro')
