@@ -53,4 +53,4 @@ function exercici_nivell_tres(){
 /* - Exercici 2
 Crear una funció anònima autoinvocable (igualada a una variable) que imprimeixi 
 per pantalla el nom d'usuari rebut com a paràmetre */
-(function(nom){console.log(nom)})('Alvaro')
+const variable = (function(nom){console.log(nom)})('Alvaro')
