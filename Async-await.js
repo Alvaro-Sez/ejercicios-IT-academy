@@ -60,7 +60,7 @@ async function una_altre_funcio(){
     return new Promise ((resolve)=>setTimeout(()=>resolve('hello after 2000ms'),2000))
    }
 async function exercici_nivell_dos(){
-        const answer = await un_altre_funcio()
+        const answer = await una_altre_funcio()
         console.log(answer)
 }
 /* Nivell 3
