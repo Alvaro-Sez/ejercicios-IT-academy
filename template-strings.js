@@ -43,14 +43,14 @@ function exercici_nivell_tres(){
         }
     }
     /* logica del ejercicio */
-    let matriu = [],
-    count = 1
+    let matriu = []
+    
     for(let i=0;i<10;i++) matriu[i]=compte_fins_nou
     
-    matriu.forEach(f=>{
+    matriu.forEach((f,index)=>{
         f()
-        console.log(`loop num: ${count} acabat`)
-        count++
+        console.log(`loop num: ${index+1} acabat`)
+        
     })
 }
 /* - Exercici 2
