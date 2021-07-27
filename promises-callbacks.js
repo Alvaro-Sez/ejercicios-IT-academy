@@ -60,7 +60,7 @@ const getEmpleado = (id)=>{
 /* - Exercici 2
 Creu una altra arrow function getSalario que rebi com a paràmetre un objecte 
 employee i retorni el seu salari. */
-getSalario = (obj)=>{
+const getSalario = (obj)=>{
     return new Promise ((resolve,reject)=>{
         let salary
         salaries.forEach(sal => sal.id==obj.id?salary = sal.salary:false)
