@@ -71,7 +71,7 @@ getSalario = (obj)=>{
 /* - Exercici 3
 Invoqui la primera Promise getEmpleado i posteriorment getSalario,
 niant l'execució de les dues promises. */
-getEmpleado(3) // <<< input de la id que es vol trobar
+getEmpleado(3) // <<< input de la id del objecte que es vol trobar
     .then( obj=>getSalario(obj) ) // <<< part del Nivell 2 exercici 3, niant l'execucio
     .then( info=>console.log(info) )
 /* Nivell 3 
