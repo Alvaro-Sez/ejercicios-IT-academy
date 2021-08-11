@@ -33,24 +33,26 @@ john.decirNombre();
 Crear una function creadora d'objectes,
 abstraient la definició de les classes. Invocar-amb diferents definicions.
 ------------------------------------------------------------------------------
-si ho he entes be, l'enunciat m'indica que he de crear una classe que contingui una funcio
-creadora d'objectes, i la he d'invocar amb diferents parametres(definicions)*/
-class object{
-    constructor(parameter){
-        this.param = parameter
-    }
-    
-    create_obj = ()=>{
-        this.objecte = {
-            param:this.param
-        }
-        return console.log(this.objecte)
-    }
+/* funcio constructora */
+function perro(nom,edad,raza){
+    this.nom = nom,
+    this.edad = edad,
+    this.raza = raza
+}
+perro.prototype.ladrar = function (){
+    console.log('guau guau!')
+}
+perro.prototype.hablar_sobre_mi_mascota = function (){
+    console.log(`tengo un perro de raza ${this.raza} que se llama ${this.nom}, y tiene ${this.edad} años`)
 }
 /* invocacions amb diferent definicions */
-const obj_A = new object('inside obj A'),
-    obj_B = new object('inside obj B'),
-    obj_C = new object('inside obj C');
-obj_A.create_obj()
-obj_B.create_obj()
-obj_C.create_obj()
+console.log('Iniciando primera clase abstracta  -----mi perro rex-----')
+const rex = new perro('Rex','7','pastor aleman')
+rex.ladrar()
+rex.hablar_sobre_mi_mascota()
+
+console.log('Iniciando segunda clase abstracta -----mi perro donald-----')
+
+const donald = new perro ('donald','3','bull-dog')
+donald.ladrar()
+donald.hablar_sobre_mi_mascota()
