@@ -28,31 +28,37 @@ class Persona{
 }
 let john = new Persona('john')
 john.decirNombre();
+
+------------------------------------------------------------------------------
 /* Nivell 3
 - Exercici 1
 Crear una function creadora d'objectes,
 abstraient la definició de les classes. Invocar-amb diferents definicions.
-------------------------------------------------------------------------------
-/* funcio constructora */
-function perro(nom,edad,raza){
-    this.nom = nom,
-    this.edad = edad,
-    this.raza = raza
-}
-perro.prototype.ladrar = function (){
-    console.log('guau guau!')
-}
-perro.prototype.hablar_sobre_mi_mascota = function (){
-    console.log(`tengo un perro de raza ${this.raza} que se llama ${this.nom}, y tiene ${this.edad} años`)
-}
-/* invocacions amb diferent definicions */
-console.log('Iniciando primera clase abstracta  -----mi perro rex-----')
-const rex = new perro('Rex','7','pastor aleman')
-rex.ladrar()
-rex.hablar_sobre_mi_mascota()
 
-console.log('Iniciando segunda clase abstracta -----mi perro donald-----')
+/* clase abstracta */
 
-const donald = new perro ('donald','3','bull-dog')
-donald.ladrar()
-donald.hablar_sobre_mi_mascota()
+class ClaseAbstracta {
+  constructor(){
+    if (new.target === ClaseAbstracta) {
+     throw new Error( 'Esta clase es abstracta y no puede ser instanciada' );
+    }
+  }
+}
+
+/* funcio creadora Objectes */
+
+function createObj(){
+
+return (Object.create(ClaseAbstracta.prototype,{constructor : {value : ClaseAbstracta}}))
+
+}
+
+/* Invocacions  */
+
+const Obj1 = createObj(),
+Obj2 = createObj(),
+Obj3 = createObj()
+
+console.log(typeof Obj1)
+console.log(typeof Obj2)
+console.log(typeof Obj3)
