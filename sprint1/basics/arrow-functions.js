@@ -1,7 +1,7 @@
 /* Nivell 1
 - Exercici 1
 Imprimir per pantalla el resultat d'una arrow function autoinvocable que sumi dos nombres. */
-((a,b)=>console.log(a+b))(3,5);
+console.log(((a,b)=>a+b)(3,5));
 
 /* Nivell 2
 - Exercici 1
