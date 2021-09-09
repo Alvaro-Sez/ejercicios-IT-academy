@@ -1,3 +1,7 @@
+/* He permitido que la clase Jugador , pueda ser instanciada repetidas veces, por lo que se pueden iniciar varios jugadores
+con el mismo nombre, pero en el proceso de creacion del Jugador, tambien se crea una instancia de la clase Marcador, y solo en esta clase he implementado
+el singleton, como pide el enunciado.*/
+
 const inquirer = require('inquirer')
 
 /* data */
@@ -102,7 +106,7 @@ class Marcador {
     this.instanceName = instanceName 
     this.points = 0
   }
-  /* implementacion singleton */
+  /* implementacion singleton <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
   static assignMarcador (instanceName){
     if( !(instanceList.includes(instanceName)) ){
       instanceList.push(instanceName)
